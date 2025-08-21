@@ -37,7 +37,7 @@ We welcome responsible disclosure and appreciate your help in improving the safe
 
 ## Supported Versions
 
-This portion is TBD, the data below is a place holder. After updates it will be moved into the top section of this document. Any versions not listed are EOL or in a beta status...
+This portion is TBD, the data below is a place holder. After updates it will be moved into the top section of this document. Any versions not listed are EOL or in a beta status.
 
 | Version | Supported          |
 | ------- | ------------------ |
