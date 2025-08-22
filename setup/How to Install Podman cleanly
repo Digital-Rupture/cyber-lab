@@ -46,4 +46,3 @@ Verify Kubernetes context:
 kubectl config use-context docker-desktop
 kubectl get pods
 
-vert it into a GitHub README with badges and modular install logic.
