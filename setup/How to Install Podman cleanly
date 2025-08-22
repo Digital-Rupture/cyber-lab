@@ -27,7 +27,8 @@ cd podman-desktop-1.20.2
 ./podman-desktop
 
 ⚙️ Step 5: Install  (Optional)
-Podman Desktop may prompt to install . If you see a  error, install PolicyKit:
+⚙️ Step 5: Install PolicyKit (Optional)
+Podman Desktop may prompt to install PolicyKit. If you see a PolicyKit error, install PolicyKit:
 sudo apt install policykit-1
 
 Then retry the install from the Podman Desktop GUI.
