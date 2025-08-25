@@ -38,4 +38,4 @@ Avoid breaking existing functionality—check for regressions.
 
 6:Celebrate your contributions—even small ones matter
 
-7:No Cussing and Maintain A Professional Ethic
+7: Maintain Professional Language and Ethic
