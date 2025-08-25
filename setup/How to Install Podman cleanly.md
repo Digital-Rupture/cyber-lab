@@ -15,22 +15,16 @@ Podman Desktop depends on several shared libraries. Install them with:
 sudo apt update
 sudo apt install libnspr4 libnss3 libxss1 libgtk-3-0 libasound2t64 policykit-1 -y
 
-🐳 Step 3: Update and Start Docker Desktop
-Podman Desktop uses Docker Desktop’s Kubernetes context () for cluster integration. Ensure Docker Desktop is:
-• 	✅ Updated to the latest version
-• 	✅ Kubernetes is enabled in Settings → Kubernetes
-• 	✅ Docker Desktop is running before launching Podman
+⚙️ Step 3: Install PolicyKit (Optional)
+Podman Desktop may prompt to install PolicyKit. If you see a PolicyKit error, install PolicyKit:
+sudo apt install policykit-1
+
+Then retry the install from the Podman Desktop GUI.
 
 🚀 Step 4: Launch Podman Desktop
 Run the AppImage directly:
 cd podman-desktop-1.20.2
 ./podman-desktop
-
-⚙️ Step 5: Install PolicyKit (Optional)
-Podman Desktop may prompt to install PolicyKit. If you see a PolicyKit error, install PolicyKit:
-sudo apt install policykit-1
-
-Then retry the install from the Podman Desktop GUI.
 
 🧾 Optional: Forensic Logging (Course Project Tip)
 mkdir -p ~/install_logs
