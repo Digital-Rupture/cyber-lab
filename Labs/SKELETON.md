@@ -5,7 +5,7 @@ siem_lab/
 │   ├── port_scanner.yml
 │   └── log_wiper.yml
 ├── dashboards/           # Kibana JSON exports (prebuilt views)
-│   ├── malware_dashboard.json
+│   ├── malware_dashboard.ndjson
 │   └── shell_alerts.json
 ├── alerts/               # SIEM detection rules
 │   ├── suricata_rules/
