@@ -1,0 +1,15 @@
+{
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+  },
+  "version": 1,
+  "type": "dashboard",
+  "attributes": {
+    "title": "Shell Alerts Dashboard",
+    "hits": 0,
+    "description": "",
+    "panelsJSON": "[]",
+    "optionsJSON": "{\"darkTheme\":false}",
+    "timeRestore": false
+  }
+}

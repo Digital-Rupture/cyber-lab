@@ -1,0 +1,18 @@
+
+# Podman container manifest for a simulated port scanner
+apiVersion: v1
+kind: Pod
+metadata:
+  name: port-scanner
+spec:
+  hostNetwork: true
+  containers:
+    - name: scanner
+      image: docker.io/instrumentisto/nmap:latest
+      command: ["/bin/sh", "-c"]
+      args:
+        - >
+          while true; do
+            nmap -sS 8.8.8.8;
+            sleep 60;
+          done

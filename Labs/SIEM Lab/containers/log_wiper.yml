@@ -1,0 +1,25 @@
+
+# Podman container manifest for a simulated log wiper
+apiVersion: v1
+kind: Pod
+metadata:
+  name: log-wiper
+spec:
+  containers:
+    - name: wiper
+      image: docker.io/library/busybox:latest
+      command: ["/bin/sh", "-c"]
+      args:
+        - >
+          while true; do
+            echo "" > /host/log/test-syslog;
+            sleep 60;
+          done
+      volumeMounts:
+        - name: host-logs
+          mountPath: /host/log
+  volumes:
+    - name: host-logs
+      hostPath:
+        path: /var/log
+        type: Directory

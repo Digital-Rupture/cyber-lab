@@ -16,7 +16,7 @@ Below are the individuals who have contributed code, documentation, ideas, or fe
 
 These contributors have helped shape modules, improve documentation, or test lab components.
 
-- *Name Placeholder* – Suricata ruleset module, ELK dashboard tweaks  
+- **Paul Schoenbeck** – Lab Setup, SIEM Lab creation  
 - *Name Placeholder* – IPFIX parser improvements, lab setup feedback
 
 ---

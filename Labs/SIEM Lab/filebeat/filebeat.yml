@@ -1,0 +1,18 @@
+
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/syslog
+- type: filestream
+  id: suricata-eve
+  enabled: true
+  paths:
+    - /var/log/suricata/eve.json
+  parsers:
+    - ndjson:
+        target: ""
+        add_error_key: true
+
+output.elasticsearch:
+  hosts: ["localhost:9200"]

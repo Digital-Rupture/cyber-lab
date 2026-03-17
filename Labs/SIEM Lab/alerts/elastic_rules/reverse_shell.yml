@@ -1,0 +1,13 @@
+- rule_id: "reverse_shell_detection"
+  name: "Reverse Shell Detection"
+  description: "Detects a potential reverse shell based on network connections."
+  risk_score: 75
+  severity: "high"
+  type: "query"
+  # This query is more generic than the original. It looks for common patterns used in reverse shells,
+  # not just the specific 'nc' command from the lab simulation.
+  query: >
+    (process.name: "nc" and process.args: "-e") or
+    (process.name: ("bash", "sh") and process.args: "/dev/tcp/*") or
+    (process.name: "python*" and process.args: "*socket.socket*" and process.args: "*subprocess.call*")
+  index: "filebeat-*"

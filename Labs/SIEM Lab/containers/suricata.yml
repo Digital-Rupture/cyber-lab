@@ -1,0 +1,39 @@
+# Podman container manifest for Suricata
+apiVersion: v1
+kind: Pod
+metadata:
+  name: suricata
+spec:
+  hostNetwork: true
+  containers:
+    - name: suricata
+      image: docker.io/jasonish/suricata:latest
+      command: ["/usr/bin/suricata", "-i", "eth0"]
+      # IMPORTANT: You may need to change 'eth0' to match the network interface
+      # you want to monitor on your system.
+      securityContext:
+        capabilities:
+          add:
+            - NET_ADMIN
+            - NET_RAW
+            - SYS_NICE
+      volumeMounts:
+        - name: suricata-rules
+          mountPath: /etc/suricata/rules
+        - name: suricata-logs
+          mountPath: /var/log/suricata
+        - name: suricata-config
+          mountPath: /etc/suricata
+  volumes:
+    - name: suricata-rules
+      hostPath:
+        path: ./alerts/suricata_rules
+        type: Directory
+    - name: suricata-logs
+      hostPath:
+        path: /var/log/suricata
+        type: DirectoryOrCreate
+    - name: suricata-config
+      hostPath:
+        path: ./suricata-config
+        type: DirectoryOrCreate
